@@ -67,3 +67,5 @@ NEXT_PUBLIC_GOOGLE_CLOUD_STORAGE_BUCKET=your-bucket-name
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+# SC_TCG_SCANNER_LISTER
