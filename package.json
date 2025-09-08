@@ -1,5 +1,5 @@
 {
-  "name": "kanva-tcg-ai",
+  "name": "sct-tcg-ai-scan",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
