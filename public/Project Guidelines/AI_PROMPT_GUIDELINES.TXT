@@ -1,0 +1,658 @@
+================================================================================
+ADVANCED TRADING CARD RECOGNITION PLATFORM - AI PROMPT GUIDELINES
+================================================================================
+
+PROJECT: Advanced Trading Card Recognition Platform (Sports & TCG)
+DOCUMENT: AI Development Partner Guidelines & Prompt Framework
+VERSION: 1.0
+DATE: SEPTEMBER 2025
+AUDIENCE: AI Development Partners, Project Management Team
+
+================================================================================
+PROJECT MANAGEMENT FRAMEWORK
+================================================================================
+
+ROLE DEFINITIONS:
+- PROJECT MANAGER: Strategic oversight, requirements definition, quality assurance
+- AI DEVELOPER: Complete code implementation, technical architecture, testing
+- RELATIONSHIP: Trust-based partnership with clear responsibilities and expectations
+
+DEVELOPMENT PHILOSOPHY:
+The AI Developer is the technical expert responsible for all code implementation.
+The Project Manager provides strategic direction and validates deliverables.
+This framework ensures complete, production-ready implementations while maintaining
+clear accountability and quality standards.
+
+CORE PRINCIPLES:
+1. COMPLETE IMPLEMENTATIONS: No code fragments, snippets, or partial solutions
+2. PRODUCTION-READY: All code must be deployment-ready with proper error handling
+3. MOLECULAR STRUCTURE: Components built as reusable, self-contained modules
+4. ITERATIVE DELIVERY: Working features delivered incrementally with full functionality
+5. SCALABLE ARCHITECTURE: Code designed for growth from day one
+6. COMPREHENSIVE REVIEW: Every implementation reviewed holistically
+7. NO ORPHANED CODE: All code connects properly to the complete system
+
+PROJECT SCOPE UNDERSTANDING:
+- Multi-category trading card platform (Sports Cards + TCG Games)
+- Sports: Baseball, Basketball, Football, Soccer, Hockey (all eras)
+- TCG: Pokémon, Magic: The Gathering, Disney Lorcana, Yu-Gi-Oh!
+- AI-powered recognition with continuous learning
+- Real-time marketplace integration across multiple platforms
+- Comprehensive collection management for all card types
+- Cross-platform mobile and web applications
+
+================================================================================
+AI DEVELOPER RESPONSIBILITIES
+================================================================================
+
+PRIMARY RESPONSIBILITIES:
+- Complete feature implementation from database to UI
+- Technical architecture and system design decisions
+- Code quality, testing, and deployment preparation
+- Performance optimization and scalability planning
+- Security implementation and vulnerability assessment
+- Integration testing and system validation
+- Documentation for technical implementation
+
+IMPLEMENTATION STANDARDS:
+- Write complete, working code for every request
+- Include all necessary imports, exports, and dependencies
+- Implement proper error handling and edge cases
+- Add comprehensive TypeScript typing throughout
+- Include unit tests for all business logic
+- Provide deployment-ready configurations
+- Document complex logic and architectural decisions
+
+MOLECULAR COMPONENT STRUCTURE:
+Each component must be:
+- Self-contained with clear interfaces
+- Reusable across different contexts
+- Properly typed with TypeScript
+- Tested with comprehensive test coverage
+- Documented with clear usage examples
+- Optimized for performance and accessibility
+- Integrated with the larger system architecture
+
+QUALITY ASSURANCE:
+- Code review checklist completion
+- Performance benchmarking and optimization
+- Security vulnerability assessment
+- Cross-browser and device testing
+- Accessibility compliance verification
+- Integration testing with all dependencies
+- Deployment validation and monitoring setup
+
+================================================================================
+PROJECT MANAGER RESPONSIBILITIES
+================================================================================
+
+STRATEGIC OVERSIGHT:
+- Feature prioritization and roadmap planning
+- Requirements definition and acceptance criteria
+- Quality validation and user experience review
+- Business logic verification and edge case identification
+- Progress tracking and milestone management
+- Stakeholder communication and expectation management
+- Risk assessment and mitigation planning
+
+VALIDATION RESPONSIBILITIES:
+- Functional testing and user experience validation
+- Business requirements compliance verification
+- Performance and scalability requirement validation
+- Security and compliance requirement verification
+- Integration with business processes and workflows
+- User acceptance testing coordination
+- Documentation review and approval
+
+TRUST FRAMEWORK:
+- AI Developer has complete technical autonomy
+- Project Manager focuses on business and user requirements
+- Regular milestone reviews ensure alignment
+- Open communication about challenges and solutions
+- Mutual respect for expertise and responsibilities
+- Collaborative problem-solving for complex issues
+- Clear escalation path for disagreements
+
+================================================================================
+PROMPT FRAMEWORKS
+================================================================================
+
+FEATURE IMPLEMENTATION PROMPT TEMPLATE:
+```
+PROJECT CONTEXT: Advanced Trading Card Recognition Platform
+CURRENT STATUS: [Brief description of current implementation state]
+FEATURE REQUEST: [Detailed description of the feature to implement]
+
+REQUIREMENTS:
+- Complete implementation including [specific components needed]
+- Integration with [existing systems/components]
+- Support for [specific card types: sports/TCG requirements]
+- Performance requirements: [specific metrics]
+- Security considerations: [specific requirements]
+
+DELIVERABLES EXPECTED:
+□ Complete working implementation
+□ All necessary TypeScript types and interfaces
+□ Comprehensive error handling
+□ Unit tests for business logic
+□ Integration with existing architecture
+□ Performance optimization
+□ Security implementation
+□ Documentation and usage examples
+
+TECHNICAL CONSTRAINTS:
+- Must follow existing architecture patterns
+- Must integrate with [specific systems]
+- Must support [specific requirements]
+- Must maintain [specific performance standards]
+
+Please provide the complete implementation following our molecular component
+structure and production-ready standards.
+```
+
+ARCHITECTURE REVIEW PROMPT TEMPLATE:
+```
+ARCHITECTURE REVIEW REQUEST: [Component/System Name]
+PROJECT: Advanced Trading Card Recognition Platform
+
+REVIEW SCOPE:
+- Current implementation assessment
+- Scalability and performance analysis
+- Security and compliance verification
+- Integration points validation
+- Future extensibility planning
+
+CURRENT ARCHITECTURE: [Brief description of current implementation]
+
+REVIEW REQUIREMENTS:
+□ Code quality and maintainability assessment
+□ Performance bottleneck identification
+□ Security vulnerability analysis
+□ Scalability limitation review
+□ Integration compatibility verification
+□ Best practices compliance check
+□ Optimization recommendations
+
+DELIVERABLES:
+- Comprehensive architecture assessment
+- Performance optimization recommendations
+- Security enhancement suggestions
+- Scalability improvement plan
+- Refactoring recommendations (if needed)
+- Updated documentation and diagrams
+
+Please provide a complete architectural review with specific recommendations
+for improvements and optimizations.
+```
+
+BUG FIX PROMPT TEMPLATE:
+```
+BUG REPORT: [Description of the issue]
+PROJECT: Advanced Trading Card Recognition Platform
+AFFECTED COMPONENT: [Specific component/feature]
+
+ISSUE DETAILS:
+- Expected behavior: [What should happen]
+- Actual behavior: [What is happening]
+- Steps to reproduce: [Specific steps]
+- Environment: [Browser/device/OS details]
+- Error messages: [Any console errors or logs]
+
+INVESTIGATION REQUIRED:
+□ Root cause analysis
+□ Impact assessment (other components affected)
+□ Data integrity verification
+□ Performance impact analysis
+□ Security implications review
+
+FIX REQUIREMENTS:
+□ Complete bug resolution
+□ Regression testing coverage
+□ Related edge case fixes
+□ Documentation updates
+□ Prevention measures implementation
+
+Please provide a complete fix including root cause analysis, comprehensive
+testing, and prevention measures for similar issues.
+```
+
+OPTIMIZATION PROMPT TEMPLATE:
+```
+OPTIMIZATION REQUEST: [Component/Feature Name]
+PROJECT: Advanced Trading Card Recognition Platform
+OPTIMIZATION SCOPE: [Performance/Security/UX/etc.]
+
+CURRENT METRICS:
+- Performance: [Current performance data]
+- User experience: [Current UX metrics]
+- Resource usage: [Current resource consumption]
+- Error rates: [Current error statistics]
+
+OPTIMIZATION GOALS:
+- Target performance improvements: [Specific metrics]
+- Resource usage reduction: [Specific targets]
+- User experience enhancements: [Specific improvements]
+- Reliability improvements: [Specific targets]
+
+CONSTRAINTS:
+- Must maintain existing functionality
+- Must not break existing integrations
+- Must follow security requirements
+- Must support all card types (sports + TCG)
+
+DELIVERABLES:
+□ Complete optimized implementation
+□ Performance benchmarking results
+□ Before/after comparison analysis
+□ Resource usage optimization
+□ Comprehensive testing validation
+
+Please provide complete optimization with measurable improvements and
+validation of all existing functionality.
+```
+
+================================================================================
+CODING STANDARDS & CONVENTIONS
+================================================================================
+
+TYPESCRIPT REQUIREMENTS:
+- Strict mode enabled with no 'any' types
+- All functions must have proper type annotations
+- Interfaces for all data structures
+- Enums for constants and status values
+- Utility types for complex type transformations
+- Path mapping configured for clean imports
+
+NAMING CONVENTIONS:
+- Files: kebab-case for components, camelCase for utilities
+- Components: PascalCase (CardScanner, UserProfile)
+- Functions: camelCase with descriptive verbs (getUserById, validateCardData)
+- Variables: camelCase with clear, meaningful names
+- Constants: UPPER_SNAKE_CASE for app-wide constants
+- Types/Interfaces: PascalCase with descriptive names
+- Database: snake_case for tables and columns
+
+CODE ORGANIZATION:
+- Single responsibility principle for all components
+- Pure functions wherever possible
+- Custom hooks for reusable logic
+- Context providers for shared state
+- Service layer for API interactions
+- Utility functions for common operations
+- Type definitions in dedicated files
+
+COMPONENT STRUCTURE:
+```typescript
+// Component file structure example
+export interface ComponentProps {
+  // Props interface with proper documentation
+}
+
+export const Component: React.FC<ComponentProps> = ({ prop1, prop2 }) => {
+  // Hooks (useState, useEffect, custom hooks)
+  // State management
+  // Event handlers
+  // Side effects
+  // Render helpers
+  // Main render return
+}
+
+export default Component
+```
+
+ERROR HANDLING:
+- Try-catch blocks for all async operations
+- Custom error classes for different error types
+- Error boundaries for React component errors
+- Graceful degradation for non-critical failures
+- User-friendly error messages
+- Comprehensive logging for debugging
+
+================================================================================
+DATABASE DESIGN REQUIREMENTS
+================================================================================
+
+POSTGRESQL SCHEMA DESIGN:
+- Normalized database structure (3NF minimum)
+- Proper indexing for query performance
+- Foreign key constraints for data integrity
+- Audit trails for critical data changes
+- Soft deletes for important records
+- UUID primary keys for distributed systems
+
+REQUIRED TABLES:
+users               - User accounts and profiles
+sports_cards        - Sports card master catalog
+tcg_cards          - TCG card master catalog
+user_collections   - User's card collections
+card_images        - Card image storage references
+market_data        - Pricing and market information
+scan_history       - User scan attempts and results
+training_data      - ML model training datasets
+
+DATA RELATIONSHIPS:
+- Clear foreign key relationships
+- Proper cascade delete configurations
+- Junction tables for many-to-many relationships
+- Optimized queries with appropriate indexes
+- Data validation at database level
+
+================================================================================
+API DESIGN STANDARDS
+================================================================================
+
+RESTful API CONVENTIONS:
+- Resource-based URLs (/api/v1/cards/{id})
+- HTTP methods for actions (GET, POST, PUT, DELETE)
+- Consistent response formats
+- Proper HTTP status codes
+- Comprehensive error responses
+- API versioning strategy
+
+AUTHENTICATION & AUTHORIZATION:
+- JWT-based authentication
+- Role-based access control
+- API rate limiting
+- Request validation and sanitization
+- Secure session management
+
+RESPONSE FORMATS:
+```typescript
+// Success response format
+{
+  success: true,
+  data: any,
+  meta?: {
+    pagination?: PaginationInfo,
+    timestamp: string,
+    version: string
+  }
+}
+
+// Error response format
+{
+  success: false,
+  error: {
+    code: string,
+    message: string,
+    details?: any
+  },
+  meta: {
+    timestamp: string,
+    requestId: string
+  }
+}
+```
+
+================================================================================
+TESTING REQUIREMENTS
+================================================================================
+
+TESTING STRATEGY:
+- Unit tests for all business logic (80%+ coverage)
+- Integration tests for API endpoints
+- Component tests for React components
+- End-to-end tests for critical user flows
+- Performance testing for scalability
+- Security testing for vulnerabilities
+
+TESTING FRAMEWORKS:
+- Jest for unit testing
+- React Testing Library for component testing
+- Playwright for end-to-end testing
+- Artillery for performance testing
+- OWASP ZAP for security testing
+
+TEST ORGANIZATION:
+```typescript
+// Test file structure
+describe('ComponentName', () => {
+  describe('Feature/Method', () => {
+    it('should handle expected behavior', () => {
+      // Test implementation
+    })
+    
+    it('should handle edge cases', () => {
+      // Edge case testing
+    })
+    
+    it('should handle error conditions', () => {
+      // Error handling testing
+    })
+  })
+})
+```
+
+================================================================================
+DEPLOYMENT STANDARDS
+================================================================================
+
+ENVIRONMENT CONFIGURATION:
+- Environment-specific configuration files
+- Secure environment variable management
+- Database migration scripts
+- Infrastructure as code (Terraform)
+- Container configuration (Docker)
+
+CI/CD PIPELINE:
+- Automated testing on every commit
+- Code quality checks and linting
+- Security vulnerability scanning
+- Automated deployment to staging
+- Manual approval for production deployment
+
+MONITORING & LOGGING:
+- Application performance monitoring
+- Error tracking and alerting
+- User behavior analytics
+- Infrastructure monitoring
+- Comprehensive audit logging
+
+================================================================================
+CARD RECOGNITION REQUIREMENTS
+================================================================================
+
+SPORTS CARD RECOGNITION:
+- Player name extraction and matching
+- Team logo and uniform recognition
+- Set identification from design patterns
+- Year determination from styling cues
+- Parallel and insert identification
+- Condition assessment from image quality
+- Grading company slab recognition
+
+TCG CARD RECOGNITION:
+- Card name extraction (multiple languages)
+- Set symbol recognition and matching
+- Rarity symbol identification
+- Foil treatment detection
+- Format legality validation
+- Condition assessment algorithms
+- Price correlation with condition
+
+AI/ML PIPELINE:
+- Image preprocessing and normalization
+- Feature extraction and analysis
+- Multi-model ensemble predictions
+- Confidence scoring and validation
+- User feedback integration
+- Continuous learning implementation
+- Model version management
+
+ACCURACY REQUIREMENTS:
+- Sports cards: 95%+ accuracy target
+- TCG cards: 90%+ accuracy target
+- Response time: <3 seconds per scan
+- Batch processing: 50+ cards per minute
+- Edge case handling: Damaged, rotated, partial cards
+
+================================================================================
+MARKETPLACE INTEGRATION REQUIREMENTS
+================================================================================
+
+EBAY INTEGRATION:
+- Browse API for listing data
+- Finding API for completed sales
+- Trading API for seller tools
+- Authentication and rate limiting
+- Real-time price updates
+- Historical data collection
+
+TCGPLAYER INTEGRATION:
+- Catalog API for card database
+- Pricing API for current values
+- Inventory API for availability
+- Order API for purchase integration
+- Market data for trend analysis
+- Set release notifications
+
+DATA SYNCHRONIZATION:
+- Real-time price monitoring
+- Historical price tracking
+- Market trend analysis
+- Inventory level monitoring
+- Price alert triggering
+- Cross-platform data correlation
+
+================================================================================
+QUALITY ASSURANCE FRAMEWORK
+================================================================================
+
+CODE REVIEW CHECKLIST:
+□ Functionality works as specified
+□ Code follows established patterns
+□ TypeScript types are comprehensive
+□ Error handling is implemented
+□ Performance is optimized
+□ Security vulnerabilities addressed
+□ Tests provide adequate coverage
+□ Documentation is complete
+
+TESTING CHECKLIST:
+□ Unit tests pass with >80% coverage
+□ Integration tests validate API contracts
+□ Component tests verify UI behavior
+□ End-to-end tests cover user journeys
+□ Performance tests meet benchmarks
+□ Security tests find no vulnerabilities
+□ Cross-browser testing completed
+□ Mobile device testing completed
+
+DEPLOYMENT CHECKLIST:
+□ Environment configuration verified
+□ Database migrations tested
+□ Security certificates installed
+□ Monitoring and logging configured
+□ Backup and recovery tested
+□ Performance benchmarks met
+□ User acceptance testing completed
+□ Documentation updated
+
+================================================================================
+COMMUNICATION PROTOCOLS
+================================================================================
+
+PROGRESS REPORTING:
+- Daily progress updates on major features
+- Weekly milestone reviews and planning
+- Monthly architectural reviews
+- Quarterly strategic planning sessions
+- Issue escalation within 24 hours
+- Blocker identification and resolution
+
+DOCUMENTATION REQUIREMENTS:
+- Code documentation for complex logic
+- API documentation with examples
+- Database schema documentation
+- Deployment and configuration guides
+- User guides and tutorials
+- Troubleshooting and FAQ documents
+
+COLLABORATION TOOLS:
+- Version control with clear commit messages
+- Issue tracking with detailed descriptions
+- Code review process with feedback
+- Shared documentation repository
+- Regular video conferences for complex topics
+- Screen sharing for debugging sessions
+
+================================================================================
+SUCCESS METRICS
+================================================================================
+
+DEVELOPMENT METRICS:
+- Feature delivery on schedule: 90%+
+- Code quality score: 8.5/10+
+- Test coverage: 80%+
+- Bug escape rate: <2%
+- Performance benchmarks met: 100%
+- Security vulnerabilities: 0 critical
+
+BUSINESS METRICS:
+- User adoption of new features: 60%+
+- User satisfaction with quality: 4.5/5+
+- System reliability: 99.9%+ uptime
+- Support ticket volume: <1% of users
+- Feature usage analytics: Tracked and optimized
+- Revenue impact: Measurable and positive
+
+TECHNICAL METRICS:
+- Page load times: <2 seconds
+- API response times: <500ms
+- Database query performance: <100ms
+- Mobile app performance: 60+ FPS
+- Error rates: <0.1%
+- Security scan results: No critical issues
+
+================================================================================
+CONTINUOUS IMPROVEMENT
+================================================================================
+
+FEEDBACK INTEGRATION:
+- User feedback collection and analysis
+- Performance monitoring and optimization
+- Code quality improvement initiatives
+- Security vulnerability patching
+- Feature enhancement based on usage data
+- Technical debt reduction planning
+
+LEARNING AND DEVELOPMENT:
+- Technology trend research and evaluation
+- Best practice adoption and implementation
+- Team skill development and training
+- Industry conference and event participation
+- Open source contribution and learning
+- Knowledge sharing and documentation
+
+INNOVATION INITIATIVES:
+- Experimental feature development
+- New technology evaluation and testing
+- User experience research and optimization
+- Market trend analysis and adaptation
+- Competitive feature analysis
+- Future roadmap planning and validation
+
+================================================================================
+DOCUMENT CONTROL
+================================================================================
+
+Document Status: APPROVED FOR IMPLEMENTATION
+Review Frequency: Monthly during development, quarterly post-launch
+Version Control: All changes require stakeholder approval
+Distribution: AI Development Partners, Project Management Team
+
+Last Updated: January 2024
+Next Review: February 2024
+Document Owner: Project Manager
+Technical Review: AI Development Lead
+
+CHANGE MANAGEMENT:
+- All changes to guidelines require approval
+- Major changes require stakeholder review
+- Version history maintained and documented
+- Impact assessment for all changes
+- Communication of changes to all stakeholders
+
+================================================================================
+END OF DOCUMENT
+================================================================================
