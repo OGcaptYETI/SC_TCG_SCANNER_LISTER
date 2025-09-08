@@ -9,12 +9,12 @@ import type { Metadata, Viewport } from 'next'
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#2563eb',
+  themeColor: '#0891b2', // Updated to cyber blue
 }
 
 export const metadata: Metadata = {
-  title: 'CardScan Pro - Ultimate Sports Card Recognition',
-  description: 'Advanced AI-powered sports card recognition and marketplace integration',
+  title: 'CardScanner AI - Neural Card Recognition',
+  description: 'Advanced AI-powered sports card recognition with cyber-enhanced technology',
   icons: {
     icon: '/favicon.ico',
   },
@@ -29,8 +29,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <meta name="theme-color" content="#2563eb" />
+        <meta name="theme-color" content="#0891b2" />
         <link rel="manifest" href="/site.webmanifest" />
+        {/* Optional: Add futuristic fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link 
+          href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" 
+          rel="stylesheet" 
+        />
       </head>
       <body className={`${inter.className} antialiased`}>
         <Layout>

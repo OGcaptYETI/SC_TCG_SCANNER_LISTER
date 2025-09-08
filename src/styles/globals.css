@@ -1,18 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-700: #1d4ed8;
-  --color-primary-800: #1e40af;
-  --color-primary-900: #1e3a8a;
-  --color-primary-950: #172554;
+  /* PRIMARY COLORS - Electric Blue (Professional Neon) */
+  --color-primary-50: #ecfeff;
+  --color-primary-100: #cffafe;
+  --color-primary-200: #a5f3fc;
+  --color-primary-300: #67e8f9;
+  --color-primary-400: #22d3ee;
+  --color-primary-500: #06b6d4;
+  --color-primary-600: #0891b2;
+  --color-primary-700: #0e7490;
+  --color-primary-800: #155e75;
+  --color-primary-900: #164e63;
+  --color-primary-950: #083344;
   
+  /* SECONDARY COLORS - Deep Space Grays */
   --color-secondary-50: #f8fafc;
   --color-secondary-100: #f1f5f9;
   --color-secondary-200: #e2e8f0;
@@ -23,79 +25,340 @@
   --color-secondary-700: #334155;
   --color-secondary-800: #1e293b;
   --color-secondary-900: #0f172a;
+  --color-secondary-950: #020617;
   
-  --color-sports-baseball: #1f2937;
-  --color-sports-basketball: #f59e0b;
-  --color-sports-football: #059669;
-  --color-sports-soccer: #7c3aed;
-  --color-sports-hockey: #dc2626;
+  /* ACCENT COLORS - Vibrant Purple (Premium Neon) */
+  --color-accent-50: #faf5ff;
+  --color-accent-100: #f3e8ff;
+  --color-accent-200: #e9d5ff;
+  --color-accent-300: #d8b4fe;
+  --color-accent-400: #c084fc;
+  --color-accent-500: #a855f7;
+  --color-accent-600: #9333ea;
+  --color-accent-700: #7c3aed;
+  --color-accent-800: #6b21a8;
+  --color-accent-900: #581c87;
+  --color-accent-950: #3b0764;
   
-  --color-tcg-pokemon: #ffcb05;
-  --color-tcg-magic: #ff6b35;
-  --color-tcg-lorcana: #6366f1;
-  --color-tcg-yugioh: #8b5cf6;
+  /* NEON COLORS - Strategic Accent Colors */
+  --color-neon-cyan: #00ffff;
+  --color-neon-blue: #0ea5e9;
+  --color-neon-purple: #a855f7;
+  --color-neon-pink: #ec4899;
+  --color-neon-green: #10b981;
+  --color-neon-orange: #f59e0b;
   
+  /* SPORTS COLORS - Neon Enhanced */
+  --color-sports-baseball: #0ea5e9;      /* Electric blue */
+  --color-sports-basketball: #f59e0b;    /* Neon orange */
+  --color-sports-football: #10b981;      /* Neon green */
+  --color-sports-soccer: #a855f7;        /* Neon purple */
+  --color-sports-hockey: #ec4899;        /* Neon pink */
+  
+  /* TCG COLORS - Cyber Enhanced */
+  --color-tcg-pokemon: #f59e0b;          /* Neon orange */
+  --color-tcg-magic: #a855f7;            /* Neon purple */
+  --color-tcg-lorcana: #0ea5e9;          /* Electric blue */
+  --color-tcg-yugioh: #ec4899;           /* Neon pink */
+  
+  /* STATUS COLORS - Neon Style */
   --color-success: #10b981;
   --color-warning: #f59e0b;
   --color-error: #ef4444;
-  --color-info: #3b82f6;
+  --color-info: #0ea5e9;
   
-  --color-background: #f8fafc;
-  --color-foreground: #0f172a;
-  --color-border: #e5e7eb;
-  --color-card: #ffffff;
-  --color-muted: #6b7280;
+  /* SURFACE COLORS - Dark Theme Focused */
+  --color-background: #020617;           /* Deep space */
+  --color-foreground: #f8fafc;           /* Pure white */
+  --color-border: #334155;               /* Dark gray */
+  --color-card: #0f172a;                 /* Dark blue */
+  --color-muted: #64748b;                /* Medium gray */
   
+  /* GLASS COLORS - Glassmorphism */
+  --color-glass-light: rgba(248, 250, 252, 0.1);
+  --color-glass-medium: rgba(248, 250, 252, 0.15);
+  --color-glass-heavy: rgba(248, 250, 252, 0.2);
+  
+  /* TYPOGRAPHY */
   --font-family-sans: Inter, system-ui, sans-serif;
   --font-family-mono: JetBrains Mono, monospace;
+  --font-family-display: 'Orbitron', 'Exo 2', sans-serif;
   
-  --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --shadow-card-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-elevated: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  /* ENHANCED SHADOWS - Cyber Style */
+  --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-card-hover: 0 8px 32px rgba(14, 165, 233, 0.3), 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-elevated: 0 16px 48px rgba(0, 0, 0, 0.6), 0 8px 24px rgba(14, 165, 233, 0.2);
+  --shadow-premium: 0 24px 64px rgba(0, 0, 0, 0.8), 0 12px 32px rgba(168, 85, 247, 0.3);
+  --shadow-neon: 0 0 32px rgba(14, 165, 233, 0.6), 0 0 16px rgba(14, 165, 233, 0.4);
+  --shadow-glow: 0 0 24px rgba(168, 85, 247, 0.4), 0 0 12px rgba(168, 85, 247, 0.2);
   
+  /* SPACING */
   --spacing-18: 4.5rem;
   --spacing-88: 22rem;
   --spacing-128: 32rem;
   
-  --animate-fade-in: fadeIn 0.5s ease-in-out;
-  --animate-slide-up: slideUp 0.3s ease-out;
-  --animate-slide-down: slideDown 0.3s ease-out;
-  --animate-scale-in: scaleIn 0.2s ease-out;
-  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  /* ENHANCED ANIMATIONS - Cyber Style */
+  --animate-fade-in: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  --animate-slide-up: slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  --animate-slide-down: slideDown 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  --animate-scale-in: scaleIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-shimmer: shimmer 3s linear infinite;
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+  --animate-scan: scan 3s linear infinite;
+  --animate-data-flow: dataFlow 5s linear infinite;
+  --animate-hologram: hologram 1.5s ease-in-out infinite;
 }
 
+/* ENHANCED KEYFRAMES - Cyber Effects */
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% { opacity: 0; transform: translateY(20px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 @keyframes slideUp {
-  0% { transform: translateY(10px); opacity: 0; }
+  0% { transform: translateY(30px); opacity: 0; }
   100% { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes slideDown {
-  0% { transform: translateY(-10px); opacity: 0; }
+  0% { transform: translateY(-30px); opacity: 0; }
   100% { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes scaleIn {
-  0% { transform: scale(0.95); opacity: 0; }
+  0% { transform: scale(0.8); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
 
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 20px rgba(14, 165, 233, 0.3); }
+  100% { box-shadow: 0 0 30px rgba(168, 85, 247, 0.4); }
+}
+
+@keyframes scan {
+  0% { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(300%) skewX(-15deg); }
+}
+
+@keyframes dataFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+@keyframes hologram {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+/* GLOBAL STYLES */
 html {
   font-family: var(--font-family-sans);
 }
 
+body {
+  background: linear-gradient(135deg, var(--color-background) 0%, #0f172a 50%, #1e293b 100%);
+  color: var(--color-foreground);
+  overflow-x: hidden;
+}
+
+/* Animated background particles */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(14, 165, 233, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, rgba(168, 85, 247, 0.1) 1px, transparent 1px);
+  background-size: 100px 100px, 150px 150px;
+  animation: var(--animate-data-flow);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* COMPONENT STYLES */
+
+/* Primary Buttons - Cyber Glow */
 .btn-primary {
-  @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors;
+  @apply bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden;
+  box-shadow: var(--shadow-card-hover);
 }
 
+.btn-primary:hover {
+  box-shadow: var(--shadow-neon);
+}
+
+.btn-primary::before {
+  content: '';
+  @apply absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full;
+  animation: var(--animate-scan);
+}
+
+/* Secondary Buttons - Glass Effect */
 .btn-secondary {
-  @apply bg-secondary-100 hover:bg-secondary-200 text-secondary-700 font-medium py-2 px-4 rounded-lg transition-colors;
+  @apply font-medium py-3 px-6 rounded-xl border border-secondary-600 hover:border-secondary-500 transition-all duration-300 backdrop-blur-md;
+  background: var(--color-glass-light);
+  color: var(--color-foreground);
 }
 
-.card {
-  @apply bg-white rounded-xl shadow-lg border border-gray-200 p-6;
+.btn-secondary:hover {
+  background: var(--color-glass-medium);
+  box-shadow: var(--shadow-card);
 }
+
+/* Cards - Cyber Glass */
+.card {
+  @apply rounded-2xl border border-secondary-700 p-6 transition-all duration-300 hover:-translate-y-1 backdrop-blur-md relative overflow-hidden;
+  background: var(--color-glass-light);
+  box-shadow: var(--shadow-card);
+}
+
+.card:hover {
+  background: var(--color-glass-medium);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.card::before {
+  content: '';
+  @apply absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary-400 to-transparent opacity-50;
+}
+
+/* Neon Buttons - Full Glow Effect */
+.btn-neon {
+  @apply bg-transparent border-2 text-primary-400 font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1 relative;
+  border-color: var(--color-primary-400);
+  box-shadow: inset 0 0 20px rgba(14, 165, 233, 0.2), 0 0 20px rgba(14, 165, 233, 0.2);
+}
+
+.btn-neon:hover {
+  @apply text-white;
+  background: rgba(14, 165, 233, 0.1);
+  box-shadow: inset 0 0 30px rgba(14, 165, 233, 0.3), 0 0 30px rgba(14, 165, 233, 0.3);
+}
+
+/* Purple Neon Variant */
+.btn-neon-purple {
+  @apply bg-transparent border-2 text-accent-400 font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1;
+  border-color: var(--color-accent-400);
+  box-shadow: inset 0 0 20px rgba(168, 85, 247, 0.2), 0 0 20px rgba(168, 85, 247, 0.2);
+}
+
+.btn-neon-purple:hover {
+  @apply text-white;
+  background: rgba(168, 85, 247, 0.1);
+  box-shadow: inset 0 0 30px rgba(168, 85, 247, 0.3), 0 0 30px rgba(168, 85, 247, 0.3);
+}
+
+/* Premium Cards - Enhanced Glow */
+.card-premium {
+  @apply rounded-2xl border-2 p-8 transition-all duration-300 hover:-translate-y-2 backdrop-blur-md relative overflow-hidden;
+  background: var(--color-glass-medium);
+  border-color: var(--color-primary-400);
+  box-shadow: var(--shadow-premium);
+}
+
+.card-premium:hover {
+  box-shadow: var(--shadow-neon);
+}
+
+.card-premium::before {
+  content: '';
+  @apply absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-400 via-accent-400 to-primary-400;
+}
+
+/* Cyber Text Styles */
+.text-cyber {
+  @apply bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent font-bold;
+}
+
+.text-neon {
+  @apply text-primary-400 font-bold;
+  text-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
+}
+
+.text-hologram {
+  @apply bg-gradient-to-r from-primary-400 via-accent-400 to-primary-400 bg-clip-text text-transparent font-bold;
+  background-size: 200% 100%;
+  animation: var(--animate-data-flow);
+}
+
+/* Badge Styles - Neon Enhanced */
+.badge-cyber {
+  @apply px-3 py-1 rounded-full text-sm font-bold border backdrop-blur-md;
+  background: var(--color-glass-light);
+  border-color: var(--color-primary-400);
+  color: var(--color-primary-400);
+  box-shadow: inset 0 0 10px rgba(14, 165, 233, 0.2);
+}
+
+.badge-neon {
+  @apply px-3 py-1 rounded-full text-sm font-bold border-2;
+  background: rgba(168, 85, 247, 0.1);
+  border-color: var(--color-accent-400);
+  color: var(--color-accent-400);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+}
+
+/* Special Effects */
+.scan-line {
+  @apply relative overflow-hidden;
+}
+
+.scan-line::after {
+  content: '';
+  @apply absolute top-0 left-0 w-full h-full;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(14, 165, 233, 0.3) 50%, 
+    transparent 100%);
+  transform: translateX(-100%) skewX(-15deg);
+  animation: var(--animate-scan);
+}
+
+.glass-panel {
+  background: var(--color-glass-medium);
+  @apply backdrop-blur-md border border-secondary-600 rounded-xl;
+  box-shadow: var(--shadow-card);
+}
+
+/* Input Styles - Cyber Theme */
+.input-cyber {
+  @apply bg-transparent border-2 border-secondary-600 focus:border-primary-400 text-foreground placeholder-secondary-400 rounded-lg px-4 py-3 transition-all duration-300 backdrop-blur-md;
+  background: var(--color-glass-light);
+}
+
+.input-cyber:focus {
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+}
+
+/* Loading Animations */
+.loading-cyber {
+  @apply animate-pulse;
+  background: linear-gradient(90deg, 
+    rgba(14, 165, 233, 0.1) 0%, 
+    rgba(168, 85, 247, 0.2) 50%, 
+    rgba(14, 165, 233, 0.1) 100%);
+  background-size: 200% 100%;
+  animation: var(--animate-data-flow);
+}
+
+/* Utility Classes */
+.glow-cyan { box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); }
+.glow-blue { box-shadow: 0 0 20px rgba(14, 165, 233, 0.5); }
+.glow-purple { box-shadow: 0 0 20px rgba(168, 85, 247, 0.5); }
+.glow-pink { box-shadow: 0 0 20px rgba(236, 72, 153, 0.5); }
+.glow-green { box-shadow: 0 0 20px rgba(16, 185, 129, 0.5); }

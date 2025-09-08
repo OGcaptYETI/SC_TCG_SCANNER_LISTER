@@ -14,15 +14,21 @@ const badgeVariants = cva(
         success: 'badge-success',
         warning: 'badge-warning',
         error: 'badge-error',
+        // Sports variants
         baseball: 'badge-baseball',
         basketball: 'badge-basketball',
         football: 'badge-football',
         soccer: 'badge-soccer',
         hockey: 'badge-hockey',
+        // TCG variants
         pokemon: 'badge-pokemon',
         magic: 'badge-magic',
         lorcana: 'badge-lorcana',
         yugioh: 'badge-yugioh',
+        // NEW: Cyber variants
+        cyber: 'badge-cyber',
+        neon: 'badge-neon',
+        hologram: 'badge-hologram',
       },
     },
     defaultVariants: {

@@ -14,11 +14,12 @@ import {
   User,
   Search,
   Bell,
-  Moon,
-  Sun
+  Cpu,
+  Zap
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
+import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { cn } from '@/lib/utils'
 
 interface NavigationItem {
@@ -30,7 +31,7 @@ interface NavigationItem {
 
 const navigationItems: NavigationItem[] = [
   { name: 'Dashboard', href: '/', icon: Home },
-  { name: 'Scanner', href: '/scanner', icon: Camera },
+  { name: 'Neural Scanner', href: '/scanner', icon: Camera },
   { name: 'Collection', href: '/collection', icon: FolderOpen, badge: '1.2k' },
   { name: 'Marketplace', href: '/marketplace', icon: ShoppingBag, badge: 'New' },
 ]
@@ -42,57 +43,90 @@ const secondaryItems: NavigationItem[] = [
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isDarkMode, setIsDarkMode] = useState(false)
   const pathname = usePathname()
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode)
-    // In a real app, this would update the theme context or localStorage
-    document.documentElement.classList.toggle('dark')
-  }
 
   return (
     <>
       {/* Mobile menu overlay */}
       {isMobileMenuOpen && (
         <div 
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden backdrop-blur-sm"
           onClick={() => setIsMobileMenuOpen(false)}
         />
       )}
 
-      {/* Header */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+      {/* Header - Cyber Glass Design */}
+      <header className="glass-panel sticky top-0 z-50 border-b border-secondary-700">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
+            
             {/* Logo and mobile menu button */}
             <div className="flex items-center">
               <Button
                 variant="ghost"
                 size="sm"
-                className="lg:hidden mr-2"
+                className="lg:hidden mr-2 text-primary-400 hover:text-primary-300"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                icon={isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-              />
+              >
+                {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              </Button>
               
-              <Link href="/" className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-primary-600 to-primary-700 rounded-lg flex items-center justify-center">
-                  <Camera className="h-5 w-5 text-white" />
+              {/* Cyber Logo */}
+              <Link href="/" className="flex items-center space-x-3 group">
+                <div className="w-10 h-10 bg-gradient-to-r from-primary-600 to-accent-600 rounded-lg flex items-center justify-center relative overflow-hidden">
+                  <Camera className="h-6 h-6 text-white z-10" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-400/20 to-accent-400/20 blur animate-pulse" />
                 </div>
-                <span className="text-xl font-bold text-gray-900 hidden sm:block">
-                  CardScanner AI
-                </span>
+                <div className="hidden sm:block">
+                  <span className="text-xl font-bold bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">
+                    CardScanner
+                  </span>
+                  <span className="text-xl font-bold text-foreground ml-1">AI</span>
+                </div>
               </Link>
             </div>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center space-x-1">
+              {navigationItems.map((item) => {
+                const isActive = pathname === item.href
+                const Icon = item.icon
+                
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={cn(
+                      "flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 relative group",
+                      isActive
+                        ? "text-primary-400 bg-primary-400/10 border border-primary-400/20"
+                        : "text-secondary-300 hover:text-primary-400 hover:bg-secondary-800/50"
+                    )}
+                  >
+                    <Icon className="h-4 w-4" />
+                    <span>{item.name}</span>
+                    {item.badge && (
+                      <Badge className="badge-cyber text-xs">
+                        {item.badge}
+                      </Badge>
+                    )}
+                    {/* Hover glow effect */}
+                    {!isActive && (
+                      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary-400/0 to-accent-400/0 group-hover:from-primary-400/5 group-hover:to-accent-400/5 transition-all duration-300" />
+                    )}
+                  </Link>
+                )
+              })}
+            </nav>
 
             {/* Search bar - hidden on mobile */}
             <div className="hidden md:flex flex-1 max-w-lg mx-8">
               <div className="relative w-full">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-secondary-400" />
                 <input
                   type="text"
-                  placeholder="Search cards, players, sets..."
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  placeholder="Search neural database..."
+                  className="input-cyber w-full pl-10 pr-4 text-sm"
                 />
               </div>
             </div>
@@ -103,38 +137,38 @@ export default function Navigation() {
               <Button
                 variant="ghost"
                 size="sm"
-                className="md:hidden"
-                icon={<Search className="h-5 w-5" />}
-              />
+                className="md:hidden text-primary-400 hover:text-primary-300"
+              >
+                <Search className="h-5 w-5" />
+              </Button>
+
+              {/* AI Status Indicator */}
+              <div className="hidden sm:flex items-center space-x-2 px-3 py-1 rounded-lg bg-green-400/10 border border-green-400/20">
+                <Cpu className="h-4 w-4 text-green-400 animate-pulse" />
+                <span className="text-xs text-green-400 font-medium">AI Online</span>
+              </div>
 
               {/* Notifications */}
               <Button
                 variant="ghost"
                 size="sm"
-                className="relative"
-                icon={<Bell className="h-5 w-5" />}
+                className="relative text-primary-400 hover:text-primary-300"
               >
-                <span className="absolute -top-1 -right-1 h-4 w-4 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
-                  3
-                </span>
+                <Bell className="h-5 w-5" />
+                <span className="absolute -top-1 -right-1 h-3 w-3 bg-accent-500 rounded-full animate-pulse"></span>
               </Button>
 
-              {/* Dark mode toggle */}
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={toggleDarkMode}
-                icon={isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-              />
+              {/* Theme Toggle */}
+              <ThemeToggle />
 
               {/* Profile */}
               <Button
                 variant="ghost"
                 size="sm"
-                className="hidden sm:flex"
+                className="hidden sm:flex text-primary-400 hover:text-primary-300"
               >
-                <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
-                  <User className="h-4 w-4 text-gray-600" />
+                <div className="w-8 h-8 bg-gradient-to-r from-secondary-700 to-secondary-600 rounded-full flex items-center justify-center border border-primary-400/20">
+                  <User className="h-4 w-4 text-primary-400" />
                 </div>
               </Button>
             </div>
@@ -142,19 +176,20 @@ export default function Navigation() {
         </div>
       </header>
 
-      {/* Sidebar */}
+      {/* Sidebar - Cyber Glass Design */}
       <aside className={cn(
-        "fixed inset-y-0 left-0 z-50 w-64 bg-white border-r border-gray-200 transform transition-transform duration-200 ease-in-out lg:translate-x-0 lg:static lg:inset-0",
+        "fixed inset-y-0 left-0 z-50 w-64 transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0",
+        "glass-panel border-r border-secondary-700",
         isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
       )}>
         <div className="flex flex-col h-full">
           {/* Mobile logo */}
-          <div className="flex items-center h-16 px-6 border-b border-gray-200 lg:hidden">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary-600 to-primary-700 rounded-lg flex items-center justify-center">
+          <div className="flex items-center h-16 px-6 border-b border-secondary-700 lg:hidden">
+            <Link href="/" className="flex items-center space-x-3">
+              <div className="w-8 h-8 bg-gradient-to-r from-primary-600 to-accent-600 rounded-lg flex items-center justify-center">
                 <Camera className="h-5 w-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900">
+              <span className="text-lg font-bold bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">
                 CardScanner AI
               </span>
             </Link>
@@ -173,10 +208,10 @@ export default function Navigation() {
                     key={item.name}
                     href={item.href}
                     className={cn(
-                      "flex items-center justify-between px-3 py-2 rounded-lg text-sm font-medium transition-colors",
+                      "flex items-center justify-between px-3 py-3 rounded-lg text-sm font-medium transition-all duration-300 relative group",
                       isActive
-                        ? "bg-primary-100 text-primary-700 border border-primary-200"
-                        : "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                        ? "text-primary-400 bg-primary-400/10 border border-primary-400/20"
+                        : "text-secondary-300 hover:text-primary-400 hover:bg-secondary-800/30"
                     )}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -185,17 +220,29 @@ export default function Navigation() {
                       <span>{item.name}</span>
                     </div>
                     {item.badge && (
-                      <Badge variant="secondary" className="text-xs">
+                      <Badge className={cn(
+                        "text-xs",
+                        isActive ? "badge-neon" : "badge-cyber"
+                      )}>
                         {item.badge}
                       </Badge>
+                    )}
+                    {/* Scan line effect on hover */}
+                    {!isActive && (
+                      <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="scan-line w-full h-full" />
+                      </div>
                     )}
                   </Link>
                 )
               })}
             </div>
 
-            {/* Divider */}
-            <div className="border-t border-gray-200 my-6" />
+            {/* Divider with glow */}
+            <div className="relative my-6">
+              <div className="border-t border-secondary-700" />
+              <div className="absolute inset-0 border-t border-primary-400/20" />
+            </div>
 
             {/* Secondary navigation */}
             <div className="space-y-1">
@@ -208,10 +255,10 @@ export default function Navigation() {
                     key={item.name}
                     href={item.href}
                     className={cn(
-                      "flex items-center px-3 py-2 rounded-lg text-sm font-medium transition-colors",
+                      "flex items-center px-3 py-3 rounded-lg text-sm font-medium transition-all duration-300 group",
                       isActive
-                        ? "bg-primary-100 text-primary-700 border border-primary-200"
-                        : "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                        ? "text-primary-400 bg-primary-400/10 border border-primary-400/20"
+                        : "text-secondary-400 hover:text-secondary-200 hover:bg-secondary-800/30"
                     )}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -223,17 +270,18 @@ export default function Navigation() {
             </div>
           </nav>
 
-          {/* Bottom section */}
-          <div className="p-4 border-t border-gray-200">
-            <div className="bg-gradient-to-r from-primary-50 to-primary-100 rounded-lg p-4">
-              <h4 className="text-sm font-semibold text-primary-900 mb-1">
-                Upgrade to Pro
+          {/* Bottom section - Neural upgrade prompt */}
+          <div className="p-4 border-t border-secondary-700">
+            <div className="card-premium p-4 text-center">
+              <Zap className="h-8 w-8 text-accent-400 mx-auto mb-2" />
+              <h4 className="text-sm font-semibold text-foreground mb-1">
+                Upgrade Neural Core
               </h4>
-              <p className="text-xs text-primary-700 mb-3">
-                Unlock unlimited scans and advanced features
+              <p className="text-xs text-secondary-400 mb-3">
+                Unlock quantum scanning and predictive analytics
               </p>
-              <Button size="sm" className="w-full text-xs">
-                Upgrade Now
+              <Button className="btn-neon-purple w-full text-xs py-2">
+                Enhance AI
               </Button>
             </div>
           </div>
