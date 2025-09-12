@@ -2,6 +2,6 @@
 
 import { Navigation as MainNavigation } from '@/components/navigation'
 
-export default function Navigation() {
+export function Navigation() {
   return <MainNavigation />
 }
